@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+
+	DemoClass demoClass = new DemoClass();
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -38,8 +41,8 @@ public class HelloServlet extends HttpServlet {
 		out.print("<html><body>");
 		out.print("<h1>Welcome</h1>");
 		out.print("<p>Welcome to my first servlet!</p>");
+		out.print("<p>" + demoClass.getDemoString() + "</p>");
 		out.print("</body></html>");
-
 	}
 
 	/**
